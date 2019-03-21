@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Auth Test</title>
-    </head>
-    <body>
-        <main>
+<head>
+    <title>Auth Test</title>
+</head>
+<body>
+<main>
 
-            <div id="oauth"></div>
+    <div id="oauth"></div>
 
-        </main>
+</main>
 
-        <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 
-        <script>
+<script>
 
-          let twitchURL = "https://id.twitch.tv/oauth2/authorize";
+  let twitchURL = "https://id.twitch.tv/oauth2/authorize";
 
-          let options = {
-            client_id: 'oju70henx9kteneqv89na8bormg7jm',
-            redirect_uri: 'http://localhost:3000/oauth',
-            scope: 'user:read:email',
-            response_type: 'code'
-          };
+  let options = {
+    client_id: 'oju70henx9kteneqv89na8bormg7jm',
+    redirect_uri: 'http://localhost:3000/oauth',
+    scope: 'user:read:email',
+    response_type: 'code'
+  };
 
-          let QueryString = Object.keys(options).map( (key) => {
-            return `${key}=` + encodeURIComponent(options[key]);
-          }).join("&");
+  let QueryString = Object.keys(options).map( (key) => {
+    return `${key}=` + encodeURIComponent(options[key]);
+  }).join("&");
 
-          let authURL = `${twitchURL}?${QueryString}`;
+  let authURL = `${twitchURL}?${QueryString}`;
 
-          $('#oauth').append(`<a href="${authURL}">Login With Twitch</a>`);
+  $('#oauth').append(`<a href="${authURL}">Login With Twitch</a>`);
 
-        </script>
+</script>
 
 
-    </body>
+</body>
 </html>
