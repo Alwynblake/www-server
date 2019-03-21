@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,32 +7,35 @@
 <body>
 <main>
 
-    <div id="oauth"></div>
+    <!--<div id="oauth"></div>-->
+    <div><a href="https://id.twitch.tv/oauth2/authorize?client_id=oju70henx9kteneqv89na8bormg7jm&redirect_uri=https://n12-401-lab-12-backend.herokuapp.com/oauth&scope=user:read:email&response_type=code">Login with Twitch</a></div>
 
 </main>
 
-<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<!--<script src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
 
-<script>
+<!--<script>-->
+<!--$(document).ready(function() {-->
+<!--let twitchURL = "https://id.twitch.tv/oauth2/authorize";-->
 
-  let twitchURL = "https://id.twitch.tv/oauth2/authorize";
+<!--let options = {-->
+<!--client_id: '7lazpzs69lrpishz6a8zdxyqkgjfwf',-->
+<!--redirect_uri: 'https://n12-401-lab-12-backend.herokuapp.com/oauth',-->
+<!--scope: 'user:read:email',-->
+<!--response_type: 'code'-->
+<!--};-->
 
-  let options = {
-    client_id: 'oju70henx9kteneqv89na8bormg7jm',
-    redirect_uri: 'http://localhost:3000/oauth',
-    scope: 'user:read:email',
-    response_type: 'code'
-  };
+<!--let QueryString = Object.keys(options).map( (key) => {-->
+<!--return `${key}=` + encodeURIComponent(options[key]);-->
+<!--}).join("&");-->
 
-  let QueryString = Object.keys(options).map( (key) => {
-    return `${key}=` + encodeURIComponent(options[key]);
-  }).join("&");
+<!--let authURL = `${twitchURL}?${QueryString}`;-->
 
-  let authURL = `${twitchURL}?${QueryString}`;
+<!--$('#oauth').append(`<a href="${authURL}">Login With Twitch</a>`);-->
+<!--});-->
 
-  $('#oauth').append(`<a href="${authURL}">Login With Twitch</a>`);
 
-</script>
+<!--</script>-->
 
 
 </body>
